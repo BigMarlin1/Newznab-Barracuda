@@ -3,8 +3,6 @@ Newznab-Barracuda
 
 These scripts convert your parts, binaries and releases tables to innodb with a choice of dynamic, compressed, or compact row format, dynamic is recommended.
 
-I'm using mariadb, I'm not sure if this works with mysql, it should work with percona.
-
 First, edit my.cnf and add : innodb_file_format = Barracuda then restart MYSQL.
 You can also add (gives a boost in speed) innodb_flush_log_at_trx_commit = 0
 
