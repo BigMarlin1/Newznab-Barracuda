@@ -16,6 +16,8 @@ First, do a full backup of the mysql database. mysqldump -l --user=root -p newzn
 
 Edit with a text editor my.cnf and add : innodb_file_format = Barracuda then restart MYSQL. While you are there you can add this for extra performance: innodb_flush_log_at_trx_commit = 0
 
+To get the script, browse to it in the browser, click raw, copy the link in your browser's address bar, go in a CLI (terminal for example) type wget www.example.com  ;; change www.example.com for the link you copied.
+
 With a text editor, open the script you picked (innodb_compressed.php for example), change the paths at the beggining to match the location of your newznab installation.
 
 I recommend truncating the parts and binaries tables. Login to mysql: mysql -p newznab   type in the following command : truncate binaries;truncate parts
