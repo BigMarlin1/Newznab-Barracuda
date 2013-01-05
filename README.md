@@ -16,7 +16,7 @@ Edit with a text editor my.cnf and add : innodb_file_format = Barracuda then res
 
 With a text editor, open the script you picked (innodb_compressed.php for example), change the paths at the beggining to match the location of your newznab installation.
 
-I recommend truncating the parts and binaries tables first. Login to mysql: mysql -p newznab   type in the following command : tuncate binaries;truncate parts
+I recommend truncating the parts and binaries tables. Login to mysql: mysql -p newznab   type in the following command : truncate binaries;truncate parts
 
 From a command line interface (terminal for example in linux), browse to the location of the script you picked and type php innodb_compressed.php (change compressed for the script you picked) be patient.
 
