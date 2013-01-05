@@ -1,16 +1,25 @@
 Newznab-Barracuda
 =================
 
-These scripts convert your parts, binaries and releases tables to innodb with a choice of dynamic, compressed, or compact row format, dynamic is recommended.
+---------------------------------------------------Intro------------------------------------------------------------
+First you will change mysql to use the barracuda file format. Then you will convert your tables to innodb, using either the compressed, compact or dynamic row format, I recommend dynamic.
 
-First, edit my.cnf and add : innodb_file_format = Barracuda then restart MYSQL.
+There are 3 folders, Binaries + Parts (recommended), Binaries + Parts + Releases and all the tables (not recommended)
 
-To disable barracuda, change innodb_file_format = Antelope in my.cnf
 
-Change the paths at the start of the php file you picked (innodb_dynamic for example).
+-----------------------------------------------Installation----------------------------------------------------------
+First, do a full backup of the mysql database. mysqldump -l --user=root -p newznab > newznab.sql
 
-Usage: from a command line interface, browse to the location and type php innodb_dynamic.php
+Edit with a text editor my.cnf and add : innodb_file_format = Barracuda then restart MYSQL. While you are there you can add this for extra performance: innodb_flush_log_at_trx_commit = 0
 
-Use innodb_undo.php to convert dynamic or compressed tables back to compact(the default InnoDB Row format).
+With a text editor, open the script you picked (innodb_dynamic.php for example), change the paths at the beggining to match the location of your newznab installation.
 
-For newznab innodb scripts, see: https://github.com/jonnyboy/newznab-tmux
+I recommend truncating the parts and binaries tables first. Login to mysql: mysql -p newznab   type in the following command : tuncate binaries;truncate parts
+
+From a command line interface (terminal for example in linux), browse to the location of the script you picked and type php Innodb_Dyanmic.php (change Dynamic for the script you picked) be patient.
+
+------------------------------------------------Disabling Barracuda---------------------------------------------------
+In the my.cnf file, change innodb_file_format = Antelope
+
+------------------------------------------------newznab-tmux---------------------------------------------------------
+Please see the newznab-tmux git : https://github.com/jonnyboy/newznab-tmux
