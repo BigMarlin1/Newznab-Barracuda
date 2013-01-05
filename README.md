@@ -12,6 +12,8 @@ the Binaries + Groups + Parts + Releases + Releasefiles + Releasenfo (requested 
 
 -----------------------------------------------Installation----------------------------------------------------------
 
+I recommend using mariadb or percona.
+
 First, do a full backup of the mysql database. mysqldump -l --user=root -p newznab > newznab.sql
 
 Edit with a text editor my.cnf and add : innodb_file_format = Barracuda then restart MYSQL. While you are there you can add this for extra performance: innodb_flush_log_at_trx_commit = 0
