@@ -22,7 +22,7 @@ With a text editor, open the script you picked (innodb_compressed.php for exampl
 
 I recommend truncating the parts and binaries tables. Login to mysql: mysql -p newznab   type in the following command : truncate binaries;truncate parts
 
-From a command line interface (terminal for example in linux), browse to the location of the script you picked and type php innodb_compressed.php (change compressed for the script you picked) be patient.
+From a command line interface (terminal for example in linux), browse to the location of the script you picked and type php innodb_compressed.php (change innodb_compressed.php for the script you picked) be patient.
 
 ------------------------------------------------Disabling Barracuda---------------------------------------------------
 
