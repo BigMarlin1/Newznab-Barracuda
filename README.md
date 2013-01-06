@@ -3,7 +3,7 @@ Newznab-Barracuda
 
 ---------------------------------------------------Intro------------------------------------------------------------
 
-First you will change mysql to use the barracuda file format. Then you will convert your tables to innodb, using either the compressed, compact or dynamic row format, I recommend compressed.
+First you will change mysql to use the barracuda file format. Then you will convert your tables to innodb, using either the compressed, compact or dynamic row format (I recommend compressed).
 
 There are 5 folders, Binaries + Parts (recommended), Binaries + Parts + Releases, the full folder (all the tables) (not recommended),
 
