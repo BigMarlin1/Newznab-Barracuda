@@ -27,11 +27,13 @@ I recommend truncating the parts and binaries tables. Login to mysql: mysql -p n
 From a command line interface (terminal for example in linux), browse to the location of the script you picked and type php innodb_compressed.php (change innodb_compressed.php for the script you picked) be patient.
 
 ------------------------------------------------Disabling Barracuda---------------------------------------------------
+
 If you want to disable barracuda do the following steps:
 
 In the my.cnf file, change innodb_file_format = Antelope
 
 Restart the mysql server, and mysql will convert back to antelope.
+
 ------------------------------------------------newznab-tmux---------------------------------------------------------
 
 Please see the newznab-tmux git : https://github.com/jonnyboy/newznab-tmux
