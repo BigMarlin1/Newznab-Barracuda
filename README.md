@@ -37,3 +37,9 @@ Restart the mysql server, and mysql will convert back to antelope.
 ------------------------------------------------newznab-tmux---------------------------------------------------------
 
 Please see the newznab-tmux git : https://github.com/jonnyboy/newznab-tmux
+
+---------------------------------------------------------------------------------------------------------------------
+
+Donation link, if you want, thanks!
+
+https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=kevspamail%40gmail%2ecom&lc=CA&item_name=kevin123%20software&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
