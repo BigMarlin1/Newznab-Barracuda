@@ -14,17 +14,17 @@ the Binaries + Groups + Parts + Releases + Releasefiles + Releasenfo (requested 
 
 I recommend using mariadb or percona.
 
-First, do a full backup of the mysql database. mysqldump -l --user=root -p newznab > newznab.sql
+First, do a full backup of the mysql database, change user for the user you use to connect to your sql DB. mysqldump -l --user=root -p newznab > newznab.sql
 
-Edit with a text editor my.cnf and add : innodb_file_format = Barracuda then restart MYSQL. While you are there you can add this for extra performance: innodb_flush_log_at_trx_commit = 0
+Edit with a text editor my.cnf and add : innodb_file_format = Barracuda then restart MYSQL. While you are there (my.cnf) you can add this for extra performance: innodb_flush_log_at_trx_commit = 0
 
-To get the script, browse to it in the browser, click raw, copy the link in your browser's address bar, go in a CLI (terminal for example) type wget www.example.com  ;; change www.example.com for the link you copied.
+To get the script, browse to it in the browser, click raw, copy the link in your browser's address bar, go in a command line interface (terminal for example) type wget www.example.com  ;; change www.example.com for the link you copied.
 
 With a text editor, open the script you picked (innodb_compressed.php for example), change the paths at the beggining to match the location of your newznab installation.
 
 I recommend truncating the parts and binaries tables. Login to mysql: mysql -p newznab   type in the following command : truncate binaries;truncate parts
 
-From a command line interface (terminal for example in linux), browse to the location of the script you picked and type php innodb_compressed.php (change innodb_compressed.php for the script you picked) be patient.
+From a command line interface (terminal for example), browse to the location of the script you picked and type php innodb_compressed.php (change innodb_compressed.php for the script you picked) be patient.
 
 ------------------------------------------------Disabling Barracuda---------------------------------------------------
 
